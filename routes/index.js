@@ -23,9 +23,9 @@ data incoming format:
 }
 */
 
-router.post('/', function(req, res, next) {
-  if(req.body.secureID=="secureTY"){
-    console.log(req.body.videoID);
+router.post('/temp/', function(req, res, next) {
+  //if(req.body.secureID=="secureTY"){
+    //console.log(req.body.videoID);
     var t = {
       id: videos.length + 1,
       location: req.body.location,
@@ -35,20 +35,15 @@ router.post('/', function(req, res, next) {
     }
     videos.push(t);
     res.status(200).json({"res": t});
-  }
-  else{
-    res.status(404);
-  }
+  //}
+  
 });
 
 router.post('/clear/', (req, res, next) => {
-  if(req.body.secureID=="secureTY"){
+  //if(req.body.secureID=="secureTY"){
     videos = [];
     res.status(200).json({"clear": "success"});
-  }
-  else{
-    res.status(404);
-  }
+  //}
 });
 
 module.exports = router;
