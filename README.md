@@ -12,7 +12,7 @@ Clone instructions:
 Use intructions:
 
 1. Open http://localhost:3000/ on your browser
-2. Using postman or any other posting mechanism, <b>post</b> to the same above url with JSON format:
+2. Using postman or any other posting mechanism, <b>post</b> to the url Open http://localhost:3000/temp/ with JSON format:
       data incoming format:
 {
   "secureID": "secureTY",
